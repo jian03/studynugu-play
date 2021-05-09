@@ -3,7 +3,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
-const SERVER_PORT = require('./config.js');
+const {SERVER_PORT} = require('./config.js');
 const routes = require('./routes');
 
 const app = express();
@@ -21,5 +21,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(SERVER_PORT, () => {
-    console.log('Server is running on' + SERVER_PORT + 'port');
+    console.log('Server is running on ' + SERVER_PORT + ' port');
 });

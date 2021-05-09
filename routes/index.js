@@ -4,4 +4,4 @@ const router = express.Router();
 
 router.post('/nugu/startTimer', nugu);
 
-module.express = router;
+module.exports = router;
