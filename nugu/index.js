@@ -12,7 +12,6 @@ class NUGURequest{
     constructor(httpReq){
         this.context = httpReq.body.context
         this.action = httpReq.body.action
-        console.log('NUGURequest: ' + JSON.stringify(this.context) + ", " + JSON.stringify(this.action))
     };
 
     do(nuguResponse){
@@ -51,7 +50,6 @@ const nuguReq = function(httpReq, httpRes, next){
     nuguRequest = new NUGURequest(httpReq)
     nuguRequest.do(nuguResponse)
     console.log('NUGU Response')
-    console.log(JSON,stringify(nuguResponse))
     return httpRes.send(nuguResponse)
 };
 
