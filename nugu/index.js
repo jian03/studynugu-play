@@ -1,5 +1,8 @@
 const uuid = require('uuid').v4;
 const _ = require('lodash');
+const express = require('express');
+
+const app = express();
 
 class Directive{
     constructor({type, audioItem}){
@@ -28,6 +31,15 @@ class NUGURequest{
         switch(actionName){
             case 'startTimer':
                 console.log('startTimer');
+                
+                break;
+            case 'recordTime':
+                console.log('recordTime');
+
+                break;
+            case 'remainTime':
+                console.log('remainTime');
+                
                 break;
         }
 
@@ -41,7 +53,7 @@ class NUGUResponse{
         this.verstion = '1.0.0';
         this.resultCode = 'OK';
         this.output = {};
-        this.directives = {}
+        this.directives = []
     }
 }
 
